@@ -1,10 +1,7 @@
 <?php
 include 'conexion.php';
-$username = $_POST['root'];
-$password = $_POST['root'];
-$nivel = $_POST['root'];
-$avatar = $_POST['root'];
-$cover = $_POST['root'];
+
+echo "jala!";
 
 $consulta = "select * from heroku_b573b04d84016ce.users";
 
