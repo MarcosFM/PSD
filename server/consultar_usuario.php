@@ -8,7 +8,7 @@ while($fila = $resultado -> fetch_array()){
     $usuario[] = array_map('utf8_encode', $fila);
 }
 
-echo $usuario;
+echo $usuario[];
 
 $resultado -> close();
 
