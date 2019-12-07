@@ -13,7 +13,7 @@ VALUES ('".$username."','".$password."')";
 //VALUES ('marcos','molina','', null , null)";
 
 if (mysqli_query($conexion, $consulta)){ 
-  echo "Nuevo registro exitoso";
+  echo $username . "," . $password;
 } else{
   echo "Error: " .$consulta. "<br>".mysqli_error($conexion);
 }
