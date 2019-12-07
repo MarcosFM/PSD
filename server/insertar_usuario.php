@@ -1,7 +1,5 @@
 <?php
 include 'conexion.php';
-$usuario = $_POST['usuario'];
-echo ($usuario);
 $username = $_POST['username'];
 $password = $_POST['password'];
 
