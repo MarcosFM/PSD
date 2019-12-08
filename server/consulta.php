@@ -2,7 +2,7 @@
 include 'conexion.php';
 $fk = $_GET['fk'];
 
-$consulta = "SELECT + FROM heroku_b573b04d84016ce.contador WHERE fk = '".$fk."'";
+$consulta = "SELECT * FROM heroku_b573b04d84016ce.contador WHERE fk = '".$fk."'";
 $resultado = $conexion -> query($consulta);
 
 while ($fila = $resultado -> fetch_array()){
