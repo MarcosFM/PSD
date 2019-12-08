@@ -1,19 +1,16 @@
 <?php
 include 'conexion.php';
-$username = $_POST['username'];
-$password = $_POST['password'];
+$fk = $_POST['fk'];
 
-$username = !empty($username) ? $username : null;
-$password = !empty($password) ? $password : null;
+$fk = !empty($fk) ? $fk : 0;
 
-$consulta = "insert into heroku_b573b04d84016ce.users (username, password) 
-VALUES ('".$username."','".$password."')";
+$consulta = "UPDATE heroku_b573b04d84016ce.contador SET contador =  contador+1 WHERE fk = '".$fk."'";
 
 //$consulta = "insert into heroku_b573b04d84016ce.users (username, password, nivel, avatar, cover) 
 //VALUES ('marcos','molina','', null , null)";
 
 if (mysqli_query($conexion, $consulta)){ 
-  echo $username . "," . $password;
+  echo $fk;
 } else{
   echo "Error: " .$consulta. "<br>".mysqli_error($conexion);
 }
