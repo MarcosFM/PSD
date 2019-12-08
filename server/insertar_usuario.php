@@ -2,7 +2,7 @@
 include 'conexion.php';
 $fk = $_POST['fk'];
 
-$fk = !empty($fk) ? $fk : 0;
+//$fk = !empty($fk) ? $fk : 0;
 
 $consulta = "UPDATE heroku_b573b04d84016ce.contador SET contador =  contador+1 WHERE fk = '".$fk."'";
 
